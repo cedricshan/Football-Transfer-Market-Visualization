@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <title>Football Transfer Vis</title>
+    <script type="text/javascript" src="d3.v7.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="dashboard.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="chord.html">Vis 2</a></li>
+        <li><a href="ScatterPlot.html">Vis 3</a></li>
+        <li><a href="#vis4">Vis 4</a></li>
+        <li><a href="#vis5">Vis 5</a></li>
+    </ul>
+
+    <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
+    <script src="https://unpkg.com/d3-milestones/build/d3-milestones.min.js"></script>
+
+    <div id="timeline"></div>
+
+    <script>
+        milestones('#timeline')
+            .mapping({
+                'timestamp': 'year',
+                'text': 'title'
+            })
+            .parseTime('%Y')
+            .aggregateBy('year')
+            .render([
+                //{ year: 1885, title: 'The Football Association (FA) recognizes professionalism in soccer' },
+                { year: 1893, title: 'First transfer ever for a fee of over £100: Aston Villa signed Scottish striker Willie Groves from West Bromwich' },
+                { year: 1995, title: 'Bosman ruling: Players can transfer to any club within the European Union at the end of a contract without a transfer fee being paid'},
+                { year: 2002, title: 'Transfer window created'},
+                { year: 2006, title: 'Webster ruling: Players can unilaterally walk away from a contract after a fixed period'},
+                { year: 2009, title: 'Real Madrid broke the transfer record twice in the same year: Kaká (€67m) and Cristiano Ronaldo (€94m)'},
+                { year: 2017, title: 'Current transfer record: Paris Saint-Germain spent €222m to sign Neymar from Barcelona'}
+            ]);
+    </script>
+</body>
+
+</html>

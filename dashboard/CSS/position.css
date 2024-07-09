@@ -1,0 +1,78 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url('soccer_field.png'); 
+    background-repeat: no-repeat;
+    background-size: 600px 800px; /* 200px 宽，300px 高，根据需要调整 */
+    background-position: 400px 350px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#timeline {
+    width: 70%;
+    margin: auto;
+    padding: 20px 0 0 0;
+}
+
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    height: 35px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: .8em;
+    text-align: center;
+}
+
+#selectContainer {
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    /* Background color for the container */
+    padding: 10px;
+    /* Adjust the padding as needed */
+}
+
+path{
+  stroke: #b08dea; 
+  stroke-width: 2px;
+  fill: none;
+}
+
+#selectContainer {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Background color for the container */
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+

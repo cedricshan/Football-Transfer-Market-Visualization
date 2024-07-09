@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <title>Football Transfer Vis</title>
+    <script type="text/javascript" src="d3.v7.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="sankey.html">Vis 2</a></li>
+        <li><a href="Position_interactive.html">Vis 3</a></li>
+        <li><a href="LineChart.html">Vis 4</a></li>
+        <li><a href="BoxPlot.html">Vis 5</a></li>
+    </ul>
+
+    <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
+    <script src="https://unpkg.com/d3-milestones/build/d3-milestones.min.js"></script>
+    <div id="header" style="text-align: center">
+        <h2>Football Transfer Market Visualization</h2>
+        <text>STATS 401 - Data Acquisition and Visualization
+            <br>Group 3: Xi Chen, Tianshu Feng, and Yuan Shan</text>
+        <p></p>
+    </div>
+
+    <div id="introduction" style="width:80%;margin:auto;">
+        <p>The first football transfer ever for a fee of over £100 was Scottish striker Willie Groves when he was signed by
+        Aston Villa from West Bromwich in 1893, just eight years after the Football Association (FA) recognizes professionalism
+        in football. The football transfer system had kept relatively stable since then until the famous Bosman ruling in 1995.
+        The ruling allowed players in the European Union (EU) to join any other club in the EU after their contracts expired
+        without a transfer fee, which significantly encourages players' movement because their original clubs cannot block their
+        their moves anymore. After 1995, the rules of football transfer become much more complete. For example, the Union of
+        European Football Associations (UEFA) formally implemented a transfer window for a season starting 2002-03 season,
+        restraining the time of football transfers and ensuring the stability of each club's roster. There have been also more
+        and more record-breaking transfers since then: the world transfer record was broken eight times from 1996 to 2001!</p>
+
+        <p>Nowadays, transfers have become an essential part of football. Most football clubs assemble their squads through
+            signing players from other clubs. The football powerhouses absorb the best football talents around the world,
+            increasing the competitiveness of continental competitions like the UEFA Champions League. On the other hand,
+            selling players to larger clubs has been the major source of income for smaller clubs, suggesting the fundamental
+            ability of transfers to support the football ecosystem. Transfers have also become a big economic deal: transfer
+            fees have been rapidly increasing since 1995. Today, the most expensive transfer ever is Neymar when he was signed
+            by Paris Saint-Germain for £198m/€222m from Barcelona in 2017, which is also the first ever transfer with its fee
+            surpassing £100 million. 
+        </p>
+
+        <p>Our project is a visualization about football transfer market focusing on variables including clubs, leagues,
+            years, player ages, player positions, and transfer fees. Our dataset was gathered from the
+            <a href="https://www.transfermarkt.com">Transfermarkt</a> website. We scraped the transfer data from the past 30
+            seasons (i.e. since 1994-95 season) from seven major European football leagues including Bundesliga (GER),
+            Eredivisie (NED), Liga Portugal (POR), Ligue 1 (FRA), Premier League (ENG), La Liga (ESP), and Serie A (ITA).
+            We created five visualizations, attempting to illustrate the relationship between the aforementioned variables.
+            You can access them through the navigation bar on the top.
+        </p>
+    </div>
+    
+
+    <div id="timeline"></div>
+    <div style="text-align: center;">
+        A timeline describing some important events regarding football transfer since the Bosman ruling
+    </div>
+
+    <script>
+        milestones('#timeline')
+            .mapping({
+                'timestamp': 'year',
+                'text': 'title'
+            })
+            .parseTime('%Y')
+            .aggregateBy('year')
+            .render([
+                //{ year: 1885, title: 'The Football Association (FA) recognizes professionalism in soccer' },
+                //{ year: 1893, title: 'First transfer ever for a fee of over £100: Aston Villa signed Scottish striker Willie Groves from West Bromwich' },
+                { year: 1995, title: 'Bosman ruling: Players can transfer to any club within the European Union at the end of a contract without a transfer fee being paid'},
+                { year: 2000, title: 'Luís Figo signed with Real Madrid from El Clásico rival Barcelona for record-breaking €37m'},
+                { year: 2002, title: 'Transfer windows were officially created'},
+                { year: 2006, title: 'Webster ruling: Players can unilaterally walk away from a contract after a fixed period'},
+                { year: 2009, title: 'Real Madrid broke the transfer record twice in the same year: Kaká (€67m) and Cristiano Ronaldo (€94m)'},
+                { year: 2012, title: 'Real Madrid broke the transfer record again by signing Gareth Bale from Spurs for €100m'},
+                { year: 2016, title: 'Manchester United took the record away from Real Madrid by signing Paul Pogba from Juventus for €105m'},
+                { year: 2017, title: 'Current transfer record: Paris Saint-Germain spent €222m to sign Neymar from Barcelona'}
+            ]);
+    </script>
+</body>
+
+</html>

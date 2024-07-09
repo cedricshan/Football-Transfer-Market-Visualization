@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <title>Football Transfer Vis</title>
+    <script type="text/javascript" src="d3.v7.js"></script>
+</head>
+
+<body onload="updateVisualization()">
+    <ul>
+        <li><a href="index.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="sankey.html">Vis 2</a></li>
+        <li><a href="Position_interactive.html">Vis 3</a></li>
+        <li><a href="LineChart.html">Vis 4</a></li>
+        <li><a href="BoxPlot.html">Vis 5</a></li>
+    </ul>
+
+    <div style="position:relative;top:200;width:80%;margin:auto;">
+        <h2 style="text-align: center;">Club Transfer Network</h2>
+        <p style="word-break:break-word">
+            Nodes represent clubs, and colors represent the leagues/countries where the clubs are based.
+            Link widths represent transfer frequencies between clubs.
+            It can be observed that transfers mainly occur within leagues.
+            However, the most prominent clubs (nodes closest to the center in the graph) have comprehensive talent
+            networks
+            spanning different leagues, ensuring a rich talent pool. The breadth of a club's talent network can serve as
+            a measure of its talent reservoir.
+            The graph illustrates talent transfer relationships between clubs (e.g., Borussia Dortmund being a major
+            talent source for Bayern Munich).</p>
+    </div>
+    <div id="selectContainer">
+        <label for="networkSelect">Select a network:</label>
+        <select id="networkSelect" onchange="updateVisualization()">
+            <option value=0>Top 30 clubs by transfer frequency</option>
+            <option value=1 selected="selected">Top 100 clubs by transfer frequency</option>
+            <option value=2>All clubs in the 7 leagues</option>
+        </select>
+        <br>
+        <label for="minSelect">Select the minimum number of transfers for a link:</label>
+        <select id="minSelect" onchange="updateVisualization()">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3 selected="selected">3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+    </div>
+    <script type="text/javascript" , src="network.js"> </script>
+</body>
+
+</html>

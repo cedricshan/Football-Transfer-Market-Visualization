@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <title>Football Transfer Vis</title>
+    <script type="text/javascript" src="d3.v7.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="sankey.html">Vis 2</a></li>
+        <li><a href="Position_interactive.html">Vis 3</a></li>
+        <li><a href="LineChart.html">Vis 4</a></li>
+        <li><a href="BoxPlot.html">Vis 5</a></li>
+    </ul>
+    <div style="position:relative;top:200;width:80%;margin:auto;">
+        <h2 style="text-align: center;">Transfer Fee vs. Age Box Plot</h2>
+        <p style="word-break:break-word">
+        <ul style="list-style-type:disc; list-style-position:inside;background-color:white">
+            <li>Each point represents a transfer record, and the orange line indicates the average transfer fee
+                changing with age.</li>
+            <li>It can be observed that the average transfer fee peaks around the age of 24 for players
+                (may vary across different leagues), implying that clubs have the highest expectations based on a player's
+                development potential and ability at this age.</li>
+        </ul>
+        </p>
+    </div>
+    <div id="selectContainer">
+        <label for="csv-select">Select a league:</label>
+        <select id="csv-select">
+            <option value="processed_eredivisie.csv">Eredivisie (NED)</option>
+            <option value="processed_premier-league.csv">Premier League (ENG)</option>
+            <option value="processed_1-bundesliga.csv">Bundesliga (GER)</option>
+            <option value="processed_liga-nos.csv">Liga Portugal (POR)</option>
+            <option value="processed_ligue-1.csv">Ligue 1 (FRA)</option>
+            <option value="processed_primera-division.csv">La Liga (ESP)</option>
+            <option value="processed_1-bundesliga.csv">Serie A (ITA)</option>
+        </select>
+    </div>
+
+    <script type="text/javascript" , src="BoxPlot.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+    <title>Football Transfer Vis</title>
+    <script type="text/javascript" src="d3.v7.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0"></script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="sankey.html">Vis 2</a></li>
+        <li><a href="Position_interactive.html">Vis 3</a></li>
+        <li><a href="LineChart.html">Vis 4</a></li>
+        <li><a href="BoxPlot.html">Vis 5</a></li>
+    </ul>
+    <div style="position:relative;top:200;width:80%;margin:auto;">
+        <h2 style="text-align: center;">League Transfer Sankey Diagram</h2>
+        <p style="word-break:break-word">
+            The width of each edge represents the transfer frequency from the selling league (left) to the buying league
+            (right).
+        <ul style="list-style-type:disc; list-style-position:inside;background-color:white">
+            <li> The graph illustrates the migration of players between leagues.</li>
+            <li> Thicker edges indicate relatively strong connections for the corresponding leagues (e.g., FRA to ENG).
+            </li>
+            <li> It can be observed that football leagues in England and Spain have the highest player import,
+                indicating higher talent attraction in those leagues. </li>
+            <li> The football league in France has the highest player outflow, indicating its role as a "springboard"
+                for players. </li>
+        </ul>
+        </p>
+    </div>
+    <script type="text/javascript" , src="sankey.js"> </script>
+</body>
+
+</html>

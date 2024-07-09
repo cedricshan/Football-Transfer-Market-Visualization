@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/position.css">
+    <script type="text/javascript" , src="d3.v7.js"> </script>
+    <title>Football Transfer Vis</title>
+</head>
+
+<body onload="updateVisualization()">
+    <ul>
+        <li><a href="index.html"><b>Football Transfer Market Visualization</b></a></li>
+        <li><a href="network.html">Vis 1</a></li>
+        <li><a href="sankey.html">Vis 2</a></li>
+        <li><a href="Position_interactive.html">Vis 3</a></li>
+        <li><a href="LineChart.html">Vis 4</a></li>
+        <li><a href="BoxPlot.html">Vis 5</a></li>
+    </ul>
+    <div style="position:relative;top:200;width:80%;margin:auto;">
+        <h2 style="text-align: center;">Player Position vs. Transfer Fees and Frequency Scatter Plot</h2>
+        <p style="word-break:break-word">
+        <ul style="list-style-type:disc; list-style-position:inside;background-color:white">
+            <li>Each circle's position in the plot indicates the actual on-field position.</li>
+            <li>For each position, darker colors indicate higher transfer frequency and a larger radius indicates higher
+                average transfer fees.</li>
+            <li>It can be observed that forwards have higher average transfer fees and transfer frequency, indicating
+                their higher popularity.</li>
+            <li>Comparatively, left-sided players have higher average transfer fees and transfer frequency than their
+                right-sided counterparts, highlighting the importance of the left side in football.</li>
+            <li>Among defenders, goalkeepers have a higher average transfer fee.</li>
+        </ul>
+        </p>
+    </div>
+    <div id="selectContainer">
+        <label for="yearSelect">Select a year:</label>
+        <select id="yearSelect" onchange="updateVisualization()">
+            <script>
+                const startYear = 1994;
+                const currentYear = new Date().getFullYear();
+                for (let year = currentYear; year >= startYear; year--) {
+                    document.write(`<option value="${year}">${year}</option>`);
+                }
+            </script>
+        </select>
+    </div>
+
+    <script type="text/javascript" , src="Position_interactive.js"> </script>
+</body>
+
+</html>
