@@ -5,5 +5,5 @@ This is the repository of the STATS 401 Final Project of Group 3 including Xi Ch
 The final presentation of our project can be found in detail on the website: https://transfer-market-vis.netlify.app/
 
 <div align="center">
-  <img src="Final_Poster.pdf" alt="Final Poster" style="width:70%;">
+  <img src="Final_Poster.png" alt="Final Poster" style="width:70%;">
 </div>
